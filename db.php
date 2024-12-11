@@ -4,9 +4,12 @@ $username = "root";
 $password = "root";
 $db = 'bank';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-// Check connection
+try{
+    $conn = new mysqli($servername, $username, $password, $db);
+
+}catch(Exception $e){
+    echo ("Исключение $e было обработано");
+}
 if ($conn->connect_error) {
     echo "disconnect";
     die("Connection failed: " . $conn->connect_error);

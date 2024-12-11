@@ -1,9 +1,18 @@
-/* Общие стили */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+}
+body.light {
+    background-color: #ffffff;
+
+}
+
+body.dark {
+    background-color: #121212;
+
 }
 
 .container {
@@ -14,7 +23,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
@@ -24,7 +34,8 @@ label {
     font-weight: bold;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -49,7 +60,46 @@ button:hover {
     background-color: #218838;
 }
 
-/* Стили для списка счетов */
+
+
+.header-container {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-button {
+    color: #007aff;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: rgba(0, 122, 255, 0.1);
+}
+
+.logout-button {
+    color: #ff3b30;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+
 .account-list ul {
     list-style: none;
     padding: 0;
@@ -71,7 +121,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* Кнопки редактирования и удаления */
 .account-card {
     display: flex;
     justify-content: space-between;
@@ -91,8 +140,11 @@ button:hover {
 }
 
 .account-name {
+    max-width: 300px;
     font-size: 18px;
     font-weight: bold;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .account-currency {
@@ -105,7 +157,8 @@ button:hover {
     gap: 10px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
     background-color: #cbd1d8;
     color: #fff;
     border: none;
@@ -126,7 +179,69 @@ button:hover {
     background-color: #dc3545;
 }
 
-.edit-btn:hover, .delete-btn:hover {
+.edit-btn:hover,
+.delete-btn:hover {
     opacity: 0.8;
 }
 
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog.hidden {
+    display: none;
+}
+
+.dialog-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.dialog-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.dialog-content p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.dialog-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialog-content button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

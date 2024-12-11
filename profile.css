@@ -1,0 +1,325 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.header-container {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.back-button {
+    color: #007aff;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 122, 255, 0.1);
+}
+
+.logout-button {
+    color: #ff3b30;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 59, 48, 0.1);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.1);
+}
+
+
+
+.upload-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image:hover .upload-buttons {
+    opacity: 1;
+}
+
+.upload-buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-buttons button:hover {
+    background: #0056b3;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-label {
+    font-size: 16px;
+    color: #ff9500;
+}
+
+.custom-file-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff9500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-file-button:hover {
+    background-color: #ff7500;
+}
+
+.file-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.upload-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff9500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #ff7500;
+}
+
+
+
+.download-history-file-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: #18a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.generate-file-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.generate-file-button:hover {
+    background: #218838;
+}
+
+.notice-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #ff3b30;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+}
+
+.success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+}
+
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #6c63ff;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label .toggle-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.toggle-label .moon {
+    left: 5px;
+    color: #000;
+    opacity: 1;
+}
+
+.toggle-label .sun {
+    right: 5px;
+    color: #FFD700;
+    opacity: 0;
+}
+
+input:checked+.toggle-label .moon {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+}
+
+input:checked+.toggle-label .sun {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+input:checked+.toggle-label {
+    background: #FFD700;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}

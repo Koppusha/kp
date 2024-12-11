@@ -1,0 +1,8 @@
+/vendor/
+/uploads/
+/images/
+/.osp/
+/nbproject/
+composer.lock
+composer.json
+.DS_Store

@@ -15,7 +15,6 @@ require_once('helpers.php')
 
 <body>
     <div class="container">
-        <!-- Авторизация -->
         <div class="form-container" id="login-form">
             <h2>Авторизация</h2>
             <form action="auth.php" method="POST">
@@ -35,7 +34,6 @@ require_once('helpers.php')
             </form>
         </div>
 
-        <!-- Регистрация -->
         <div class="form-container" id="register-form" style="display: none;">
             <h2>Регистрация</h2>
             <form action="regist.php" method="POST">
