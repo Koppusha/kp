@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: right;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align:  center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.notice-error {
+    background-color: rgb(203, 90, 90);      /* Задний фон прямоугольника */
+    color: rgb(204, 204, 204);               /* Цвет текста */
+    padding: 15px;              /* Внутренние отступы */
+    border-radius: 5px;         /* Скругленные углы */
+    border: 3px solid rgb(223, 156, 156);  /* Граница с темно-красным цветом */
+    font-size: 16px;            /* Размер шрифта */
+    font-weight: bold;          /* Жирный текст */
+    text-align: center;         /* Центрирование текста */
+    max-width: 400px;           /* Максимальная ширина блока */
+    margin: 20px auto;          /* Отступы сверху и снизу, центрирование по горизонтали */
+}
