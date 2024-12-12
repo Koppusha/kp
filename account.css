@@ -19,7 +19,7 @@ body.dark {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #c3ffbb;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,7 +39,7 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #b5ffc5;
     border-radius: 5px;
     box-sizing: border-box;
 }
